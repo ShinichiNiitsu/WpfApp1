@@ -16,13 +16,20 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// MainWindow.xaml の相互作用ロジック
+    /// ExpenseReportPage.xaml の相互作用ロジック
     /// </summary>
-    public partial class MainWindow : NavigationWindow
+    public partial class ExpenseReportPage : Page
     {
-        public MainWindow()
+        public ExpenseReportPage()
         {
             InitializeComponent();
+        }
+
+        // Custom constructor to pass expense report data
+        public ExpenseReportPage(object data) : this()
+        {
+            // Bind to expense report data.
+            this.DataContext = data;
         }
     }
 }
